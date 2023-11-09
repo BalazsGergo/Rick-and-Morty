@@ -21,8 +21,11 @@
   }
   div.char {
     border: 2px solid black;
+
+
+
   }
-  div.char h2, h3 {
+  div.char h2,div.char h3 {
     text-align: center;
   }
   div.char h2 {
