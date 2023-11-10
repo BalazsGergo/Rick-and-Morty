@@ -1,3 +1,4 @@
+
 const rootElement = document.querySelector("#root")
 const fetchUrl = (url) => fetch(url).then(res => res.json())
 const skeletonComponent = () => `
@@ -37,6 +38,7 @@ const buttonEventComponent = (id, url) => {
       const charElements = document.querySelectorAll(".char")
       charElements.forEach(charElement => charElement.addEventListener("click", () => {
         const selectedName = charElement.querySelector("h2").innerText // pl. Rick Sanchez, Morty Smith, Abradolf Lincler
+        const characterList = data.results
         const selectedChar = characterList.find((char) => char.name === selectedName)
         selectedCharElement.innerHTML = selectedCharacterComponent(selectedChar)
       }))
